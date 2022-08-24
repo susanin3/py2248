@@ -1,5 +1,3 @@
-a = {
-    "white": "112233"
-}
-
-white = "2fffff"
+a = [1, 2, 3]
+a += [4]
+print(a)

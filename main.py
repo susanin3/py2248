@@ -19,20 +19,24 @@ screen = pg.display.set_mode(size)
 # surface = pg.Surface()
 clock = pg.time.Clock()
 font = pg.font.Font(pg.font.get_default_font(), 20)
-c = Cell(position=(200, 200), size=cell_size, value="VAL", color=white, screen=screen)
+font.underline = Colors.WhiteSmoke
 field = Field(screen=screen, cell_size=cell_size, cell_margin=10)
 score = drawing.Text(screen=screen, text="0", position=(10, 10), color=Colors.Snow, font=font)
 
 while 1:
     screen.fill(black)
-    clock.tick(1)
-    # c.draw()
-    score.draw()
-    field.iteration(mouse=pg.mouse)
-
-    for event in pg.event.get():
+    clock.tick(60)
+    events = pg.event.get()
+    for event in events:
+        # print(event)
+        if event.type == pg.KEYDOWN:
+            if event.key == 27:
+                sys.exit()
         if event.type == pg.QUIT:
             sys.exit()
+
+    score.draw()
+    field.iteration(mouse=pg.mouse, event=events)
     # text_surface = font.render(f"{dt.datetime.now()}", True, white)
     # screen.blit(text_surface, dest=(0, 0))
     # pg.display.flip()

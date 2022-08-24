@@ -155,3 +155,4 @@ class Colors:
     WhiteSmoke = (245, 245, 245)
     Yellow = (255, 255, 0)
     YellowGreen = (154, 205, 50)
+    stack = (RoyalBlue, Plum, Coral, LightGreen, Aquamarine, SandyBrown, SteelBlue, Tan, SlateBlue, LimeGreen, PaleVioletRed, Chartreuse, IndianRed, DarkCyan)  # len=14
