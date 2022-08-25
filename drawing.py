@@ -48,3 +48,6 @@ class Text:
     def draw(self):
         text_surface = self.font.render(self.text, True, self.color)
         self.screen.blit(text_surface, dest=self.position)
+
+    def get_size(self) -> tuple:
+        return self.font.size(self.text)
