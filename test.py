@@ -1,4 +1,4 @@
-import math as m
+"""import math as m
 print(2**round(m.log2(768)))
 print(2**10)
 
@@ -13,4 +13,4 @@ print(2**10)
 "o"
 "n"
 "d"
-"g"
+"g"""

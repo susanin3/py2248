@@ -13,8 +13,7 @@ hmz.number.human_powers = (
     NS_("Sp", "Sp"),
     NS_("o", "o"),
     NS_("n", "n"),
-    NS_("d", "d"),
-    NS_("g", "g"),
+    NS_("d", "d")  # if d - win
 )
 
 

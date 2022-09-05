@@ -17,7 +17,7 @@ class Cell(object):
         self.determine_color()
         # font = pg.font.Font(pg.font.get_default_font(), 15)
         font = pg.font.Font("Roboto-Light.ttf", 20)
-        self.text = drawing.Text(screen=self.screen, text=f"{self.value}", position=formulas.center(par_pos=self.position, par_size=self.size), color=Colors.Black, font=font)
+        self.text = drawing.Text(screen=self.screen, text=f"{self.value}", position=formulas.center(par_pos=self.position, par_size=self.size), color=Colors.WhiteSmoke, font=font)
 
     def determine_color(self) -> None:
         self.color = Colors.stack[int(math.log2(self.value) % len(Colors.stack))]
